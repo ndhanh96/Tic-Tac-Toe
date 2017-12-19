@@ -1,29 +1,32 @@
 $(document).ready(function(){
-  var computer;
-  var user;
-  var box1 = true;
-  var box2 = true;
-  var box3 = true;
-  var box4 = true;
-  var box5 = true;
-  var box6 = true;
-  var box7 = true;
-  var box8 = true;
-  var box9 = true;
+   //da luu cho nay
+   var computer;
+   var user;
+   var box1 = true;
+   var box2 = true;
+   var box3 = true;
+   var box4 = true;
+   var box5 = true;
+   var box6 = true;
+   var box7 = true;
+   var box8 = true;
+   var box9 = true;
 
-  var user_click;
+   var user_click;
 
-  var arrToWin = [[1,2,3],[1,4,7],[1,5,9],[2,5,8],[3,5,7],[3,6,9],[4,5,6],[7,8,9],[3,5,7]];
-  var newArr = [];
-//convert arrToWin elements to string
-  for(var i = 0; i < arrToWin.length; i++) {
-  	newArr.push(JSON.stringify(arrToWin[i]));
-  }
-  var arrOfPlayer = [];
-  var arrOfComp = [];
+   var arrToWin = [[1,2,3],[1,4,7],[1,5,9],[2,5,8],[3,5,7],[3,6,9],[4,5,6],[7,8,9],[3,5,7]];
+   var newArr = [];
+   //convert arrToWin elements to string
+   for(var i = 0; i < arrToWin.length; i++) {
+     newArr.push(JSON.stringify(arrToWin[i]));
+   }
+   var arrOfPlayer = [];
+   var arrOfComp = [];
 
-  $(".box-tick").hide();
-  $("#chooseO").click(function(){
+
+   $(".box-tick").hide();
+   $("#chooseO").click(function(){
+
     user = 'O';
     user_click = true;
     computer = 'X';
@@ -72,8 +75,7 @@ $(document).ready(function(){
     },1000);
 
   }
-
-  function calculate() {
+   function calculate() {
       var arrOfCompCheck = "";
      arrOfComp.sort(function(a,b) {
       return a - b;
@@ -83,7 +85,7 @@ $(document).ready(function(){
     if(newArr.includes(arrOfCompCheck)) {
       setTimeout(function(){alert("You Lose");},1000);
     }
-  }
+   }
 
 
   $("#box1").click(function(){

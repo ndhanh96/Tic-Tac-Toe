@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+   alert("a")
    var computer;
    var user;
    var box1 = true;

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+   var c = "a";
    var a = "b";
    var computer;
    var user;
